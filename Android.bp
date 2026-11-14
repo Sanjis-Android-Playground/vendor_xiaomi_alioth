@@ -6,6 +6,7 @@ soong_namespace {
     imports: [
         "hardware/qcom-caf/common/libqti-perfd-client",
         "hardware/qcom-caf/sm8250",
+        "hardware/xiaomi",
         "vendor/qcom/opensource/display",
         "vendor/xiaomi/sm8250-common",
     ],
@@ -7809,6 +7810,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libbase",
                 "libbinder",
+                "libhardware",
                 "libssccalapi",
                 "vendor.xiaomi.hardware.citsensorservice@1.0",
                 "vendor.xiaomi.hardware.citsensorservice@1.1",
@@ -7869,6 +7871,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
+                "vendor.xiaomi.hardware.citsensorservice@1.0",
                 "libc++",
                 "libc",
                 "libm",
