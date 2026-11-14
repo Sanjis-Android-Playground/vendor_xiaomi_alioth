@@ -7523,3 +7523,363 @@ cc_prebuilt_binary {
     prefer: true,
     soc_specific: true,
 }
+
+cc_prebuilt_binary {
+    name: "displayfeature",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/displayfeature",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libdisplayfeatureservice",
+                "libgui_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.xiaomi.hardware.displayfeature@1.0-service",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libbinder",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "vendor.xiaomi.hardware.displayfeature@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.xiaomi.hardware.citsensorservice@1.1-service",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libssccalapi",
+                "libhidlbase",
+                "libhidltransport",
+                "vendor.xiaomi.hardware.citsensorservice@1.0",
+                "vendor.xiaomi.hardware.citsensorservice@1.1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "displayfeature.default",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/displayfeature.default.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libxml2",
+                "libqservice",
+                "libdrm",
+                "libstagefright_foundation",
+                "libhidltransport",
+                "libhidlbase",
+                "libsdm-disp-vndapis",
+                "vendor.display.config@2.0",
+                "libdisplayconfig.qti",
+                "android.frameworks.sensorservice@1.0",
+                "libtinyxml",
+                "libgui_vendor",
+                "libclient2slpi.notifier",
+                "vendor.display.postproc@1.0",
+                "vendor.display.color@1.0",
+                "vendor.display.color@1.5",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.xiaomi.hardware.displayfeature@1.0-impl",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libhidltransport",
+                "libutils",
+                "liblog",
+                "libcutils",
+                "libhardware",
+                "libbase",
+                "libbinder",
+                "vendor.xiaomi.hardware.displayfeature@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libclient2slpi.notifier",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libclient2slpi.notifier.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "vendor.xiaomi.hardware.citsensorservice@1.1",
+                "libhidlbase",
+                "libhidltransport",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisplayfeature",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdisplayfeature.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libgui_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisplayfeatureservice",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdisplayfeatureservice.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libdisplayfeature",
+                "libhidltransport",
+                "libhidlbase",
+                "libgui_vendor",
+                "vendor.xiaomi.hardware.displayfeature@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.xiaomi.hardware.citsensorservice@1.1-impl",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libhidltransport",
+                "libutils",
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libbinder",
+                "libssccalapi",
+                "vendor.xiaomi.hardware.citsensorservice@1.0",
+                "vendor.xiaomi.hardware.citsensorservice@1.1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.xiaomi.hardware.citsensorservice@1.0",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.xiaomi.hardware.citsensorservice@1.1",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
